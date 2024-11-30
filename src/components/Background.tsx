@@ -1,3 +1,5 @@
+import backgroundImage from '../assets/images/lpas-bmw-bg.webp';
+
 interface BackgroundProps {
   children: React.ReactNode;
 }
@@ -8,7 +10,7 @@ export function Background({ children }: BackgroundProps) {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://i.imgur.com/v19XvXm.png)',
+          backgroundImage: `url(${backgroundImage})`,
         }}
       >
         <div className="absolute inset-0 bg-brand-dark/70" />
