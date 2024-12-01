@@ -15,7 +15,7 @@ export function Hero() {
           </h1>
           <div className="max-w-[44rem]">
             <h2 className="mb-1 sm:mb-1 text-3xl text-gray-300 w-full">
-              Track your performance, connect with motorsport enthusiasts,and elevate your experience.
+              Track your performance, connect with motorsport enthusiasts, and elevate your experience.
             </h2>
             <p className="mb-10 sm:mb-8 text-2lg text-gray-400">
               Laps stores all your track day data so you can remember, review, share, compare,<br></br> check stats and improve.
