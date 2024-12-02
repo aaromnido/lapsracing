@@ -1,9 +1,11 @@
+// Imports
 import { useEffect, useState } from 'react';
 import heroPicture1 from '../assets/images/hero-picture-1.webp';
 import heroPicture2 from '../assets/images/hero-picture-2.webp';
 import heroPicture3 from '../assets/images/hero-picture-3.webp';
 import heroPicture4 from '../assets/images/hero-picture-4.webp';
 
+// Defining images array
 const images = [
   heroPicture1,
   heroPicture2,
@@ -15,7 +17,7 @@ export function Slideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
-  // Precargar imágenes
+  // Preload images Effect
   useEffect(() => {
     const preloadImages = () => {
       const imagePromises = images.map((src) => {
@@ -35,7 +37,7 @@ export function Slideshow() {
     preloadImages();
   }, []);
 
-  // Rotación de imágenes
+  // Image rotation
   useEffect(() => {
     if (!loaded) return;
 
@@ -57,6 +59,7 @@ export function Slideshow() {
     );
   }
 
+  // Image transition
   return (
     <div className="absolute inset-0 overflow-hidden">
       {images.map((image, index) => (
